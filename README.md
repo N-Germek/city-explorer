@@ -21,7 +21,7 @@
 
 - >[Day 1 Whiteboard](cityExplorer.jpg)
 
-Day 1 Collaberators: Zayah and Justin.
+Lab 6 Collaberators: Zayah and Justin.
 
 Time Estimates
 For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
@@ -42,6 +42,6 @@ Estimate of time needed to complete: 1 hour
 
 Start time: 10:00pm
 
-Finish time: 
+Finish time: 10:35pm
 
-Actual time needed to complete: 
+Actual time needed to complete: 35 minutes

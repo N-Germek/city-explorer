@@ -27,7 +27,7 @@ render() {
       <input onChange={(event) => this.setState({ searchQuery: event.target.value })}
         placeholder="search for a city!"
       />
-      <button onClick={this.getLocation}>Explore here!</button>
+      <button onClick={this.getLocation}>Explore!</button>
       {this.state.locationName &&
         <h2>The city you searched for is{this.state.locationName}</h2>
       }
