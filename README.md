@@ -36,11 +36,11 @@ Finish time: 9:09pm
 
 Actual time needed to complete: 31 minutes
 
-Name of feature: 
+Name of feature: Set up your React repository & API keys
 
-Estimate of time needed to complete: 
+Estimate of time needed to complete: 1 hour
 
-Start time: 
+Start time: 10:00pm
 
 Finish time: 
 
