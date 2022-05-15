@@ -1,5 +1,5 @@
 import './App.css';
-// import { render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import React from 'react';
 import axios from 'axios';
 
@@ -15,7 +15,7 @@ class App extends React.Component {
     const url = `https://us1.locationiq.com/v1/seatch.php?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&q=${this.state.searchQuery}&format=json`;
     const response = await axios.get(url);
     console.log("Response from axios", response.date[0].display_name);
-    this.setState({ locationName: response.data[0].display_name });
+    this.setState({ locationName: response.data[0] });
   }
 
 
@@ -29,7 +29,8 @@ render() {
       />
       <button onClick={this.getLocation}>Explore!</button>
       {this.state.locationName &&
-        <h2>The city you searched for is{this.state.locationName}</h2>
+        <h2>The city you searched for is{this.state.locationName.display_name} <br>
+        Longitute{this.state.locationName.long} Latitude {this.state.locationName.lat}</br></h2>
       }
     </div>
   );
