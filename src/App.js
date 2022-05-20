@@ -1,7 +1,7 @@
 import './App.css';
-import { render } from '@testing-library/react';
 import React from 'react';
 import axios from 'axios';
+import Search from './Search';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,25 +12,27 @@ class App extends React.Component {
     }
   }
   getLocation = async () => {
-    const url = `https://us1.locationiq.com/v1/seatch.php?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&q=${this.state.searchQuery}&format=json`;
+    const url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&q=${this.state.searchQuery}&format=json`;
     const response = await axios.get(url);
-    console.log("Response from axios", response.date[0].display_name);
-    this.setState({ locationName: response.data[0] });
+    console.log("Response from axios", response.data[0].display_name);
+    this.setState({ locationName: response.data[0]});
   }
 
+  changeHandler = (e) => {
+    this.setState({
+      searchQuery: e.target.value
+    })
+  }
 
 render() {
   console.log("this.state in App.js: ", this.state);
   return (
     <div className="App">
       <h1>Welcome to City Explorer</h1>
-      <input onChange={(event) => this.setState({ searchQuery: event.target.value })}
-        placeholder="search for a city!"
-      />
-      <button onClick={this.getLocation}>Explore!</button>
+      <Search changeHandler={this.changeHandler} getLocation={this.getLocation}/>
+      
       {this.state.locationName &&
-        <h2>The city you searched for is{this.state.locationName.display_name} <br>
-        Longitute{this.state.locationName.long} Latitude {this.state.locationName.lat}</br></h2>
+        <h2>The city you searched for is {this.state.locationName.display_name} Longitute{this.state.longitude} Latitude {this.state.latitude}</h2>
       }
     </div>
   );
