@@ -13,15 +13,19 @@
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+05-10-2022 8:39pm - Began Working on City Explorer app.
+05-10-2022 9:25pm - completed first build out pieces of Lab 6.
+05-10-2022 10:38pm - proofread, debugged and deployed app.js.
+05-14-2022 11:30pm - added times to README, continued to troubleshoot CORS permission issue.
 
 ## Credit and Collaborations
 
 - >[Day 1 Whiteboard](cityExplorer.jpg)
+- >[Day 2 Whiteboard](wireframe2.png)
+- >[Day 3 Whiteboard](cityExplorer3.png)
 
-Lab 6 Collaberators: Zayah and Justin.
+Lab 6 and 7 Collaberators: Zayah and Justin, Derek and Sarah, Jim and Luis, Sarah and Justin.
 
 Time Estimates
 For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
@@ -46,31 +50,18 @@ Finish time: 10:35pm
 
 Actual time needed to complete: 35 minutes
 
-# Project Name
+Name of feature: Cards 2-4 in lab 6.
 
-**Author**: Natalija
-**Version**: 2.0.0
+Estimate of time needed to complete: 2 hours
 
-## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+Start time: 2:00pm
 
-## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+Finish time: 8 days so far.
 
-## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+Actual time needed to complete: 8 hours.
+### LAB 7
 
-## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
-
-## Credit and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
-Time Estimates
-For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
-
-Name of feature: Lab 07 nin it's entirety.
+Name of feature: Lab 07 in it's entirety.
 
 Estimate of time needed to complete: 2 hours
 
