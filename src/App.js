@@ -33,7 +33,7 @@ render() {
       <Search changeHandler={this.changeHandler} getLocation={this.getLocation}/>
       
       {this.state.locationName &&
-        <h2>The city you searched for is {this.state.locationName.display_name} Longitute{this.state.longitude} Latitude {this.state.latitude}</h2>
+        <h2>The city you searched for is {this.state.locationName.display_name} Longitute{this.state.locationName.lon} Latitude {this.state.locationName.lat}</h2>
       }
     </div>
   );
