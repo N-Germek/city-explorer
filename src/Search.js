@@ -7,7 +7,7 @@ class Search extends React.Component {
         return (
             <Form>
                 <Form.Control onChange={this.props.changeHandler} placeholder={"search for a city!"} />
-                <Button onClick={this.props.getLocation}>Explore!</Button>
+                <Button onClick={this.props.handleClick} type="submit">Explore!</Button>
             </Form>
         )
     }

@@ -3,21 +3,30 @@ import React from 'react';
 import axios from 'axios';
 import Search from './Search';
 import Map from './Map';
+import Error from './Error';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       searchQuery: "",
-      locationName: ""
+      locationName: "",
+      errorMessage: ""
     }
   }
   getLocation = async (e) => {
-    e.preventDefault();
-    const url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&q=${this.state.searchQuery}&format=json`;
-    const response = await axios.get(url);
-    console.log("Response from axios", response.data[0].display_name);
-    this.setState({ locationName: response.data[0] });
+    try {
+      const url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&q=${this.state.searchQuery}&format=json`;
+      const response = await axios.get(url);
+      console.log("Response from axios", response.data[0].display_name);
+      this.setState({
+        locationName: response.data[0],
+        errorMessage:""
+      });
+    } catch (err) {
+      console.log(err.message);
+      this.errorHandler(err);
+    }
   }
 
   changeHandler = (e) => {
@@ -26,12 +35,22 @@ class App extends React.Component {
     })
   }
 
+  handleClick = (e) => {
+    e.preventDefault();
+    this.getLocation();
+  }
+  errorHandler = (err) => {
+    this.setState({
+      errorMessage: err.message,
+      locationName: ""
+    })
+  }
+
   render() {
-    console.log("this.state in App.js: ", this.state);
     return (
       <div className="App">
         <h1>Welcome to City Explorer</h1>
-        <Search changeHandler={this.changeHandler} getLocation={this.getLocation} />
+        <Search changeHandler={this.changeHandler} handleClick={this.handleClick} />
 
         {this.state.locationName &&
           <>
@@ -39,6 +58,10 @@ class App extends React.Component {
             <Map locationName={this.state.locationName}></Map>
           </>
         }
+        {this.state.errorMessage &&
+          <>
+            <Error errorMessage={this.state.errorMessage}></Error>
+          </>}
       </div>
     );
   }
