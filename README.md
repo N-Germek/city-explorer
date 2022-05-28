@@ -18,6 +18,11 @@
 05-10-2022 9:25pm - completed first build out pieces of Lab 6.
 05-10-2022 10:38pm - proofread, debugged and deployed app.js.
 05-14-2022 11:30pm - added times to README, continued to troubleshoot CORS permission issue.
+05-19-2022 11:12am - continued to troubleshoot CORS issues with TA and tutor.
+05-21-2022 10:38pm - continued to troubleshoot CORS issues and added Map component.
+05-23-2022 1:18pm - continued to troubleshoot CORS and Key issues with TA.
+05-23-2022 11:43pm - created code for Map to render.
+05-24-2022 8:31pm - corrected render code corrected and Error.js created.
 
 ## Credit and Collaborations
 
@@ -59,6 +64,16 @@ Start time: 2:00pm
 Finish time: 8 days so far.
 
 Actual time needed to complete: 8 hours.
+
+Name of feature: Card 4 in lab 6.
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 9:43pm
+
+Finish time: 9 days so far.
+
+Actual time needed to complete: many hours.
 ### LAB 7
 
 Name of feature: Lab 07 in it's entirety.
