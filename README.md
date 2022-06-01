@@ -4,13 +4,18 @@
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+
+This is a city explorer application with the purpose of unforming the user of different items available in the city that they are searching for. From weather, entertainment to a map with the geographic coordinates, the user will be able to make a educated decision of where they would like to explore next based on their interests.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+
+The first steps that the developer would need is to build out a front end of their React app. this will be the information that the user will see to make the application interactive and give information to the user. Afterward, the developer would need to guild the back end server to be able to pull the proper weather data utilizing the proper API weather library.
+
+By the time the user will have access the only need is for a city of choice to be built in.
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+
+The primary libraries used are React, WeatherIO, LocationIQ. The languages used are JSX, JS, React-Bootstrap, JavaScript, HTML and Python.
 
 ## Change Log
 
@@ -80,8 +85,8 @@ Name of feature: Lab 07 in it's entirety.
 
 Estimate of time needed to complete: 2 hours
 
-Start time: n/a since I was catching up on other labs/assignments
+Start time: 6:13pm
 
-Finish time: n/a
+Finish time: 10:27am
 
-Actual time needed to complete: not started yet.
+Actual time needed to complete: This took days with much debugging.
