@@ -4,6 +4,7 @@ import axios from 'axios';
 import Search from './Search';
 import Map from './Map';
 import Error from './Error';
+import Weather from './Weather';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,7 +12,8 @@ class App extends React.Component {
     this.state = {
       searchQuery: "",
       locationName: "",
-      errorMessage: ""
+      errorMessage: "",
+      weatherData: []
     }
   }
   getLocation = async (e) => {
@@ -21,6 +23,23 @@ class App extends React.Component {
       console.log("Response from axios", response.data[0].display_name);
       this.setState({
         locationName: response.data[0],
+        errorMessage:""
+      });
+    } catch (err) {
+      console.log(err.message);
+      this.errorHandler(err);
+    }
+    this.getWeather();
+  }
+
+
+  getWeather = async (e) => {
+    try {
+      const url = `http://localhost:3001/weather?type=${this.state.searchQuery}`;
+      const response = await axios.get(url);
+      console.log("Response from axios", response.data);
+      this.setState({
+        weatherData: response.data,
         errorMessage:""
       });
     } catch (err) {
@@ -55,7 +74,8 @@ class App extends React.Component {
         {this.state.locationName &&
           <>
             <h2>The city you searched for is {this.state.locationName.display_name} Longitute{this.state.locationName.lon} Latitude {this.state.locationName.lat}</h2>
-            <Map locationName={this.state.locationName}></Map>
+            <Map locationName={this.state.locationName} />
+            <Weather weatherData={this.state.weatherData} />
           </>
         }
         {this.state.errorMessage &&
